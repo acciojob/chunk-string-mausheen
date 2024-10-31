@@ -1,20 +1,28 @@
 function stringChop(str, size) {
   // your code here
-	let arr=[];
-	let s='';
-	let i=0;
+	// let arr=[];
+	// let s='';
+	// let i=0;
 
-	while(i<str.length){
-		if(s.length==size){
-			arr.push(s);
-			s="";
-		}
-		s+=str.charAt(i);
-		i++;
+	// while(i<str.length){
+	// 	if(s.length==size){
+	// 		arr.push(s);
+	// 		s="";
+	// 	}
+	// 	s+=str.charAt(i);
+	// 	i++;
+	// }
+	// if(s) arr.push(s);
+	// //console.log(arr);
+	// return arr;
+
+	let arr=[];
+
+	for(let i=0;i<str.length;i+=size){
+		arr.push(str.slice(i,i+size));
 	}
-	if(s) arr.push(s);
-	//console.log(arr);
 	return arr;
+	
 	
 }
 
